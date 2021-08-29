@@ -1,0 +1,9 @@
+<div class="container" *ngIf="!loginStranica && !signupStranica">
+  <mat-card>
+    <h2>Prijavite se ili se registrujte</h2>
+    <div class="dugme-container">
+      <button class="dugme" mat-raised-button color="primary" routerLink="/login" (click)="loginStranica=true">Prijavi se</button>
+      <button class="dugme" mat-raised-button color="accent" routerLink="/signup" (click)="signupStranica=true">Registruj se</button>
+    </div>
+  </mat-card>
+</div>

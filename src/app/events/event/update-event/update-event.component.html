@@ -1,0 +1,49 @@
+<mat-card>
+  <mat-card-title>
+    <h2>Profile</h2>
+  </mat-card-title>
+  <mat-card-content>
+    <form class="signupForma" #f="ngForm">
+      <!-- Adresa -->
+      <mat-form-field>
+        <input [(ngModel)]="eventInfo.adresa" type="text" matInput placeholder="adresa" ngModel name="adresa" required #adresaInput="ngModel">
+        <mat-error *ngIf="adresaInput.hasError('required')">Field shouldn't be empty</mat-error>
+      </mat-form-field>
+      <!-- Kategorija -->
+      <mat-form-field>
+        <input [(ngModel)]="eventInfo.kategorija" type="text" matInput placeholder="kategorija" ngModel name="kategorija" required #kategorijaInput="ngModel">
+        <mat-error *ngIf="kategorijaInput.hasError('required')">Field shouldn't be empty</mat-error>
+      </mat-form-field>
+      <!-- Opis -->
+      <mat-form-field>
+        <input [(ngModel)]="eventInfo.opis" type="text" matInput placeholder="opis" ngModel name="opis" required #opisInput="ngModel">
+        <mat-error *ngIf="opisInput.hasError('required')">Field shouldn't be empty</mat-error>
+      </mat-form-field>
+      <!-- Date of start-->
+      <mat-form-field>
+        <input [(ngModel)]="eventInfo.pocetak" matInput placeholder="pocetak" [matDatepicker]="picker" ngModel name="pocetak" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <!-- Date of finish-->
+      <mat-form-field>
+        <input [(ngModel)]="eventInfo.kraj" matInput placeholder="kraj" [matDatepicker]="picker" ngModel name="kraj" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <!-- Ucesnici -->
+      <mat-form-field>
+        <input [(ngModel)]="eventInfo.ucesnici" type="text" matInput placeholder="ucesnici" ngModel name="ucesnici" required #ucesniciInput="ngModel">
+        <mat-error *ngIf="ucesniciInput.hasError('required')">Field shouldn't be empty</mat-error>
+      </mat-form-field>
+      <!-- Status -->
+      <mat-form-field>
+        <input [(ngModel)]="eventInfo.status" type="text" matInput placeholder="status" ngModel name="status" required #statusInput="ngModel">
+        <mat-error *ngIf="statusInput.hasError('required')">Field shouldn't be empty</mat-error>
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="primary" (click)="updateEvent()">Update</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+

@@ -1,0 +1,93 @@
+<div class="container">
+  <mat-card>
+    <mat-card-title>
+      <h3>{{ eventService.getActiveEventById(1).ime }}</h3>
+    </mat-card-title>
+    <mat-card-content>
+      <mat-card-subtitle>Adress</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(1).adresa }}</span>
+          <!-- password -->
+          <mat-card-subtitle>Category</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(1).kategorija }}</span>
+          <!-- name -->
+          <mat-card-subtitle>Description</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(1).opis }}</span>
+          <!-- surname -->
+          <mat-card-subtitle>Start time</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(1).pocetak }}</span>
+          <!-- birthdate -->
+          <mat-card-subtitle>End time</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(1).kraj }}</span>
+          <!-- address -->
+          <mat-card-subtitle>Participants</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(1).ucesnici }}</span>
+          <!-- interests -->
+          <mat-card-subtitle>Status</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(1).status }}</span>
+    </mat-card-content>
+    <button mat-raised-button color="primary" (click)="joinEvent()">JOIN</button>
+    <button mat-raised-button color="primary" >Change</button>
+    <span *ngIf="isJoined" class="element">Succesfully joined Event!</span>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>
+      <h3>{{ eventService.getActiveEventById(2).ime }}</h3>
+    </mat-card-title>
+    <mat-card-content>
+      <mat-card-subtitle>Adress</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(2).adresa }}</span>
+          <!-- password -->
+          <mat-card-subtitle>Category</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(2).kategorija }}</span>
+          <!-- name -->
+          <mat-card-subtitle>Description</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(2).opis }}</span>
+          <!-- surname -->
+          <mat-card-subtitle>Start time</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(2).pocetak }}</span>
+          <!-- birthdate -->
+          <mat-card-subtitle>End time</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(2).kraj }}</span>
+          <!-- address -->
+          <mat-card-subtitle>Participants</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(2).ucesnici }}</span>
+          <!-- interests -->
+          <mat-card-subtitle>Status</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(2).status }}</span>
+    </mat-card-content>
+    <button mat-raised-button color="primary" (click)="joinEvent()">JOIN</button>
+    <button mat-raised-button color="primary" >Change</button>
+    <span *ngIf="isJoined" class="element">Succesfully joined Event!</span>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>
+      <h3>{{ eventService.getActiveEventById(3).ime }}</h3>
+    </mat-card-title>
+    <mat-card-content>
+      <mat-card-subtitle>Adress</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(3).adresa }}</span>
+          <!-- password -->
+          <mat-card-subtitle>Category</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(3).kategorija }}</span>
+          <!-- name -->
+          <mat-card-subtitle>Description</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(3).opis }}</span>
+          <!-- surname -->
+          <mat-card-subtitle>Start time</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(3).pocetak }}</span>
+          <!-- birthdate -->
+          <mat-card-subtitle>End time</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(3).kraj }}</span>
+          <!-- address -->
+          <mat-card-subtitle>Participants</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(3).ucesnici }}</span>
+          <!-- interests -->
+          <mat-card-subtitle>Status</mat-card-subtitle>
+          <span class="element">{{ eventService.getActiveEventById(3).status }}</span>
+    </mat-card-content>
+    <button mat-raised-button color="primary" (click)="joinEvent()">JOIN</button>
+    <button mat-raised-button color="primary" >Change</button>
+    <span *ngIf="this.isJoined" class="element">Succesfully joined Event!</span>
+  </mat-card>
+</div>
+

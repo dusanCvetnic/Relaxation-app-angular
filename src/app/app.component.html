@@ -1,0 +1,16 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <div class="logo">
+        <a routerLink="/"><mat-icon>home_work</mat-icon></a>
+    </div>
+    <div class="meni">
+        <a routerLink="/signup">Signup</a>
+        <a routerLink="/login">Login</a>
+        <a *ngIf="userService.currentUser" routerLink="/events">Events</a>
+        <a *ngIf="userService.currentUser" routerLink="/event">Add Event</a>
+        <button mat-raised-button color="warn" *ngIf="userService.currentUser" (click)="logOut()">Logout</button>
+    </div>
+  </mat-toolbar>
+</div>
+<router-outlet></router-outlet>
+

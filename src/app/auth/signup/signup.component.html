@@ -1,0 +1,66 @@
+<section class="container">
+  <mat-card>
+    <mat-card-title>
+      <h2>Registration</h2>
+    </mat-card-title>
+    <mat-card-content>
+      <form class="signupForma" #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <!-- Email -->
+        <mat-form-field>
+          <input type="email" matInput placeholder="Your email" ngModel name="email" required #emailInput="ngModel">
+          <mat-error *ngIf="emailInput.hasError('required')">Field shouldn't be empty</mat-error>
+          <mat-error *ngIf="!emailInput.hasError('required')">Use correct email format</mat-error>
+        </mat-form-field>
+        <!-- Password -->
+        <mat-form-field hintLabel="Please enter min 6 characters">
+          <input type="password" matInput placeholder="Your password" ngModel name="password"
+            required minlength="6" #passInput="ngModel">
+          <mat-hint align="end">{{ passInput.value?.length }} / 6</mat-hint>
+        </mat-form-field>
+        <!-- Name -->
+        <mat-form-field>
+          <input type="text" matInput placeholder="Your name" ngModel name="name" required #nameInput="ngModel">
+          <mat-error *ngIf="nameInput.hasError('required')">Field shouldn't be empty</mat-error>
+        </mat-form-field>
+        <!-- Surname -->
+        <mat-form-field>
+          <input type="text" matInput placeholder="Your surname" ngModel name="surname" required #surnameInput="ngModel">
+          <mat-error *ngIf="surnameInput.hasError('required')">Field shouldn't be empty</mat-error>
+        </mat-form-field>
+        <!-- Date of Birth-->
+        <mat-form-field>
+          <input matInput placeholder="Your date of birth." [matDatepicker]="picker" ngModel name="birthDate" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <!-- Address -->
+        <mat-form-field>
+          <input type="text" matInput placeholder="Your address" ngModel name="address" required #addressInput="ngModel">
+          <mat-error *ngIf="addressInput.hasError('required')">Field shouldn't be empty</mat-error>
+        </mat-form-field>
+        <!-- Interests -->
+        <mat-form-field>
+          <mat-label>Interests</mat-label>
+          <mat-select multiple ngModel name="interests" required #interestsInput="ngModel">
+              <mat-option>sport</mat-option>
+              <mat-option>fun</mat-option>
+              <mat-option>music</mat-option>
+              <mat-option>movie</mat-option>
+              <mat-option>culture</mat-option>
+          </mat-select>
+          <mat-error *ngIf="interestsInput.hasError('required')">Field shouldn't be empty</mat-error>
+        </mat-form-field>
+        <!-- <mat-form-field>
+          <input type="text" matInput placeholder="Your interests" ngModel name="interests" required #interestsInput="ngModel">
+          <mat-error *ngIf="interestsInput.hasError('required')">Field shouldn't be empty</mat-error>
+        </mat-form-field> -->
+
+        <button type="submit" mat-raised-button color="primary">Register</button>
+
+        <mat-label *ngIf="errorExists"> {{errorText}} </mat-label>
+      </form>
+    </mat-card-content>
+
+  </mat-card>
+
+</section>

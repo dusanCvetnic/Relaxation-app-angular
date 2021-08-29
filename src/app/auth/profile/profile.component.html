@@ -1,0 +1,39 @@
+<div class="container">
+
+    <mat-card class="wrapper">
+      <mat-card-title>
+        <h2>Profile</h2>
+      </mat-card-title>
+      <mat-card-content>
+        <mat-dialog-content>
+        <!-- Email -->
+        <mat-card-subtitle>Email</mat-card-subtitle>
+        <span class="element">{{ userService.currentUser.email }}</span>
+        <!-- password -->
+        <mat-card-subtitle>Password</mat-card-subtitle>
+        <span class="element">{{ userService.currentUser.password }}</span>
+        <!-- name -->
+        <mat-card-subtitle>Name</mat-card-subtitle>
+        <span class="element">{{ userService.currentUser.name }}</span>
+        <!-- surname -->
+        <mat-card-subtitle>Surname</mat-card-subtitle>
+        <span class="element">{{ userService.currentUser.surname }}</span>
+        <!-- birthdate -->
+        <mat-card-subtitle>Date of birth</mat-card-subtitle>
+        <span class="element">{{ userService.currentUser.birthDate }}</span>
+        <!-- address -->
+        <mat-card-subtitle>Address</mat-card-subtitle>
+        <span class="element">{{ userService.currentUser.address }}</span>
+        <!-- interests -->
+        <mat-card-subtitle>Interests</mat-card-subtitle>
+        <span class="element">{{ userService.currentUser.interests }}</span>
+        </mat-dialog-content>
+      </mat-card-content>
+      <button mat-raised-button (click)="openEditProfile()">EDIT</button>
+
+    </mat-card>
+</div>
+
+
+
+

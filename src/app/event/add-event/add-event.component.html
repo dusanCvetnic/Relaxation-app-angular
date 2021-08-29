@@ -1,0 +1,58 @@
+<section class="container">
+  <mat-card>
+    <mat-card-title>
+      <h2>Register Event</h2>
+    </mat-card-title>
+    <mat-card-content>
+      <form class="signupForma" #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <!-- ime -->
+        <mat-form-field>
+          <input type="text" matInput placeholder="Ime" ngModel name="ime" required #imeInput="ngModel">
+          <mat-error *ngIf="imeInput.hasError('required')">Field shouldn't be empty</mat-error>
+        </mat-form-field>
+        <!-- adresa -->
+        <mat-form-field>
+          <input type="text" matInput placeholder="Adresa" ngModel name="adresa" required #adresaInput="ngModel">
+          <mat-error *ngIf="adresaInput.hasError('required')">Field shouldn't be empty</mat-error>
+        </mat-form-field>
+        <!-- kategorija -->
+        <mat-form-field>
+          <input type="text" matInput placeholder="Kategorija" ngModel name="kategorija" required #kategorijaInput="ngModel">
+          <mat-error *ngIf="kategorijaInput.hasError('required')">Field shouldn't be empty</mat-error>
+        </mat-form-field>
+        <!-- opis -->
+        <mat-form-field>
+          <input type="text" matInput placeholder="Opis" ngModel name="opis" required #opisInput="ngModel">
+          <mat-error *ngIf="opisInput.hasError('required')">Field shouldn't be empty</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Pocetak" [matDatepicker]="picker" ngModel name="pocetak" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <!-- kraj-->
+        <mat-form-field>
+          <input matInput placeholder="Kraj" [matDatepicker]="picker" ngModel name="kraj" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <!-- ucesnici -->
+        <mat-form-field>
+          <input type="text" matInput placeholder="Ucesnici" ngModel name="ucesnici" required #ucesniciInput="ngModel">
+          <mat-error *ngIf="ucesniciInput.hasError('required')">Field shouldn't be empty</mat-error>
+        </mat-form-field>
+        <!-- status -->
+        <mat-form-field>
+          <input type="text" matInput placeholder="status" ngModel name="status" required #statusInput="ngModel">
+          <mat-error *ngIf="statusInput.hasError('required')">Field shouldn't be empty</mat-error>
+        </mat-form-field>
+
+        <button type="submit" mat-raised-button color="primary">Register</button>
+
+        <mat-label *ngIf="errorExists"> {{errorText}} </mat-label>
+      </form>
+    </mat-card-content>
+
+  </mat-card>
+
+</section>

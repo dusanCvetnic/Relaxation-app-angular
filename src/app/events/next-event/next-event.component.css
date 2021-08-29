@@ -1,0 +1,29 @@
+.container{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+mat-card{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+mat-dialog-content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+mat-card-subtitle{
+  margin-bottom: 5px;
+}
+.element{
+  font-family: Roboto;
+  margin-bottom: 10px;
+}
+button{
+  margin-bottom: 10px;
+}

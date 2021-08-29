@@ -1,0 +1,34 @@
+/* .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  font-family: Roboto;
+}
+.dugme{
+  margin: 5px auto;
+  width: 50%;
+} */
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+mat-toolbar{
+  display: flex;;
+  justify-content: space-between;
+}
+.meni{
+  display: flex;
+  justify-content: space-between;
+}
+a{
+  margin: 10px;
+}
+

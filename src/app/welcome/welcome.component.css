@@ -1,0 +1,31 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+mat-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+}
+h1{
+  display: flex;
+  justify-content: center;
+}
+h2{
+  display: flex;
+  justify-content: center;
+}
+.dugme-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dugme{
+  margin: 5px auto;
+  width: 50%;
+}
